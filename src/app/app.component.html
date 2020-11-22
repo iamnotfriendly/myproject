@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,54 +10,7 @@
       <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Home</a>
       <a class="navbar-brand" routerLink="/calendar" routerLinkActive="active">Calendar</a>
       <a class="navbar-brand" routerLink="/users" routerLinkActive="active">User</a>
-    </div> 
-  </div>
-</nav>
- 
-<div class="container">
-  <br>
-  <br>
-  <h1 class="text-center">PEA Car Reservation</h1>
-  <form class="myform">
-    <div class="text-center">ระบบจองรถยนต์</div>
-    <div class="column">
-      <div>
-          <label>Username: </label>
-        </div>
-        <div>
-          <input type="text" class="form-control" #email />
-        </div>  
-    <div>
-      <label>Password:  </label>
-    </div>
-    <div>
-      <input type="password" class="form-control" #password />
-      <br>
-    <p>
-      <button type="button" class="btn btn-sm btn-danger" (click)="onSignin(email.value,password.value)">Register</button>
-    </p>
     </div>
   </div>
-    <div class="column">
-        <div>
-            <label>Username: </label>
-          </div>
-          <div>
-            <input type="text" class="form-control" #emailSignup />
-          </div>  
-      <div>
-        <label>Password:  </label>
-      </div>
-      <div>
-        <input type="password" class="form-control" #passwordSignup />
-      </div>
-    </div>
-    <br>
-    <p>
-      <button type="button" class="btn btn-sm btn-default" (click)="onSignup(emailSignup.value,passwordSignup.value)">Submit</button>
-    </p>
-    </form>
-  <router-outlet></router-outlet>
- 
-</div>
-<app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home><!-- /.container -->
+</nav> -->
+<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthServiceService } from './services/auth-service.service';
 import { FirebaseService } from './services/firebase.service';
 
 @Component({
@@ -9,7 +10,11 @@ import { FirebaseService } from './services/firebase.service';
 export class AppComponent implements OnInit{
   title = 'carcar';
   isSignedIn = false
-  constructor(public firebaseService : FirebaseService){}
+  constructor(
+    public firebaseService: FirebaseService,
+    public authService: AuthServiceService
+    ){}
+
   ngOnInit(){
     if(localStorage.getItem('user')!== null)
     this.isSignedIn= true
@@ -29,6 +34,16 @@ export class AppComponent implements OnInit{
   handleLogout(){
     this.isSignedIn = false
 
+  }
+
+  ggLogin(){
+    this.authService.doGoogleLogin().then(result=>{
+      console.log(result)
+    })
+  }
+
+  logout(){
+    this.authService.logout()
   }
 
 }
